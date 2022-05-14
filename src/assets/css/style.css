@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;700&family=Righteous&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #FB6B6B;
+    margin:0px;
+    height:100%;
+
+}
+
+.landing-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-content > img {
+    width: 136px;
+    height: 161px;
+}
+
+.name-logo {
+    font-family: 'Righteous', cursive;
+    font-size: 36px;
+    line-height: 45px;
+    color: #FFFFFF;
+    margin-top: 13px;
+    margin-bottom: 30px;
+}
+
+.landing-button {
+    font-family: 'Recursive', cursive;
+    font-size: 18px;
+    line-height: 22px;
+    width: 246px;
+    height: 54px;
+    background: #FFFFFF;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
