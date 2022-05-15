@@ -7,11 +7,11 @@ export default function Footer ({acertos, quantidade}) {
             return (
                 <div className="footer-icons">
                     {acertos.map((acerto, index) => {
-                        if(acerto === "zap"){
+                        if(acerto === "checkmark"){
                             return (
                                 <ion-icon name="checkmark-circle" style={{color: "limegreen", fontSize: "23px"}} key={index}></ion-icon>
                             )
-                        }else if(acerto === "quase"){
+                        }else if(acerto === "help"){
                             return (
                                 <ion-icon name="help-circle" style={{color: "#FF922E", fontSize: "23px"}} key={index}></ion-icon>
                             )
@@ -40,7 +40,7 @@ export default function Footer ({acertos, quantidade}) {
 
     const InserirMensagem = () => {
         console.log(acertos);
-        if (acertos.includes("erro")) {
+        if (acertos.includes("close")) {
             return (
                 <div className="footer-mensagem">
                     <p className="fonte-negrito">😥 Putz...</p>
