@@ -5,11 +5,12 @@ import setinha from '../assets/img/setinha.png';
 export default function Card (props) {
 
     const [status, setStatus] = React.useState(props.status);
+
     const pergunta = props.pergunta;
     const resposta = props.resposta;
 
 
-    const Put = () => {
+    const PutCard = () => {
 
         if(status === 0){
             return (
@@ -33,9 +34,9 @@ export default function Card (props) {
                     <div className="card-resposta">
                         {props.resposta}
                         <div className='buttons'>
-                            <button className='nao-lembrou'>Não lembrei</button>
-                            <button className='quase'>Quase não lembrei</button>
-                            <button className='zap'>Zap!</button>
+                            <button className='nao-lembrou' onClick={() => props.setAcertos([...props.acertos, "erro"])}>Não lembrei</button>
+                            <button className='quase' onClick={() => props.setAcertos([...props.acertos, "quase"])}>Quase não lembrei</button>
+                            <button className='zap' onClick={() => props.setAcertos([...props.acertos, "zap"])}>Zap!</button>
                         </div>
                     </div>
                 </div>
@@ -47,7 +48,7 @@ export default function Card (props) {
 
     return (
         <>
-            <Put />
+            <PutCard />
         </>
     )
 }

@@ -76,6 +76,7 @@ export default function RecallPage () {
     ];
 
     const [perguntasAtualizadas, setPerguntasAtualizadas] = React.useState([]);
+    const [acertos, setAcertos] = React.useState([]);
 
     React.useEffect(() => {
         setPerguntasAtualizadas(popularArray(perguntas.length, perguntas));
@@ -91,10 +92,12 @@ export default function RecallPage () {
                     pergunta={pergunta} 
                     resposta={resposta} 
                     status={status}
+                    acertos={acertos}
+                    setAcertos={setAcertos}
                     /> 
                 )}
             </div>
-            <Footer />
+            <Footer  acertos={acertos} quantidade={perguntas.length}/>
         </div>
     );
 }
